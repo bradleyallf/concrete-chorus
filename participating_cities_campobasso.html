@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Concrete Chorus Project</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0 10%;
+      background: #ffffff;
+      color: #222;
+    }
+    header {
+      background: #F3EAD9;
+      color: #5E969D;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    nav {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #264653;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      background: white;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+      color: #5E969D;
+    }
+    ul {
+      margin-left: 1.5rem;
+    }
+    a {
+      color: #2a9d8f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="Concrete Chorus Logo.png" alt="Concrete Chorus Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto 1rem auto;" />
+    <h1><a href="index.html" style="text-decoration: none; color: inherit;">The Concrete Chorus Project</a></h1>
+    <h3>A Study of Urban Bird Song | Spring 2026</h3>
+  </header>
+
+  <nav>
+  <a href="background.html">Background</a>
+  <a href="instructions.html">Instructions</a>
+  <a href="questions.html">Questions</a>
+  <div style="display: inline-block; position: relative;">
+    <a href="#" style="cursor: pointer;">Participating Cities ▾</a>
+    <div style="position: absolute; background: white; border: 1px solid #ccc; padding: 0.5rem; display: none;" onmouseleave="this.style.display='none'">
+      <a href="participating_cities_durham.html" style="display: block; margin: 0.2rem 0; color: #264653;">Durham</a>
+      <a href="participating_cities_chicago.html" style="display: block; margin: 0.2rem 0; color: #264653;">Chicago</a>
+      <a href="participating_cities_seattle.html" style="display: block; margin: 0.2rem 0; color: #264653;">Seattle</a>
+      <a href="participating_cities_fort_collins.html" style="display: block; margin: 0.2rem 0; color: #264653;">Fort Collins</a>
+      <a href="participating_cities_denver.html" style="display: block; margin: 0.2rem 0; color: #264653;">Denver</a>
+      <a href="participating_cities_los_angeles.html" style="display: block; margin: 0.2rem 0; color: #264653;">Los Angeles</a>
+
+
+    </div>
+  </div>
+  <script>
+    const dropdown = document.querySelector('nav div');
+    const trigger = dropdown.querySelector('a');
+    const menu = dropdown.querySelector('div');
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    });
+  </script>
+
+</nav>
+
+<section>
+  <h2>Fort Collins</h2>
+  <p>Use the interactive map below to explore  35 listening locations for Fort Collins.</p>
+    <p>Are you interested in volunteering in Fort Collins? Please fill out the Fort Collins interest form <a href="https://forms.gle/rDeWg2dupjGtQVdq8">here</a>!</p>
+
+  <iframe src="fort_collins_centroid_map.html" style="width: 100%; height: 600px; border: none;"></iframe>
+</section>
+
+</body>
+</html>
