@@ -1,0 +1,160 @@
+:root {
+  --color-heading: #5e969d;
+  --color-link: #267f75;
+  --color-nav: #264653;
+  --color-header: #f3ead9;
+  --color-text: #222;
+  --color-border: #ccc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: var(--color-text);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 10%;
+}
+
+header {
+  background: var(--color-header);
+  color: var(--color-heading);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.site-logo {
+  display: block;
+  height: auto;
+  margin: 0 auto 1rem;
+  max-width: 150px;
+}
+
+.site-title {
+  color: inherit;
+  text-decoration: none;
+}
+
+nav {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+nav a,
+.dropdown-toggle {
+  color: var(--color-nav);
+  font: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3rem;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-menu {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  display: none;
+  left: 50%;
+  min-width: 12rem;
+  padding: 0.5rem;
+  position: absolute;
+  text-align: left;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.dropdown-menu.is-open {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+}
+
+section {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  margin: 2rem 0;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+}
+
+ul {
+  margin-left: 1.5rem;
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #e9a13a;
+  outline-offset: 3px;
+}
+
+.map-frame {
+  border: 0;
+  height: 600px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  header {
+    padding: 1.5rem 0.75rem;
+  }
+
+  nav {
+    gap: 0.75rem 1.25rem;
+  }
+
+  section {
+    margin: 1rem 0;
+    padding: 1.25rem;
+  }
+
+  .dropdown-menu {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+}
+
