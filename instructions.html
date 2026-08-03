@@ -3,108 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Concrete Chorus Project</title>
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 10%;
-      background: #ffffff;
-      color: #222;
-    }
-    header {
-      background: #F3EAD9;
-      color: #5E969D;
-      padding: 2rem 0;
-      text-align: center;
-    }
-    nav {
-      margin-top: 1rem;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #264653;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      background: white;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: 8px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-    h1, h2, h3 {
-      color: #5E969D;
-    }
-    ul {
-      margin-left: 1.5rem;
-    }
-    a {
-      color: #2a9d8f;
-    }
-  </style>
+  <title>2026 Volunteer Instructions | The Concrete Chorus Project</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <img src="Concrete Chorus Logo.png" alt="Concrete Chorus Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto 1rem auto;" />
-    <h1><a href="index.html" style="text-decoration: none; color: inherit;">The Concrete Chorus Project</a></h1>
+    <img class="site-logo" src="Concrete Chorus Logo.png" alt="Concrete Chorus Logo" />
+    <h1><a class="site-title" href="index.html">The Concrete Chorus Project</a></h1>
     <h3>A Study of Urban Bird Song | Spring 2026</h3>
   </header>
 
-  <nav>
-  <a href="background.html">Background</a>
-  <a href="instructions.html">Instructions</a>
-  <a href="questions.html">Questions</a>
-  <div style="display: inline-block; position: relative;">
-    <a href="#" style="cursor: pointer;">Participating Cities ▾</a>
-    <div style="position: absolute; background: white; border: 1px solid #ccc; padding: 0.5rem; display: none;" onmouseleave="this.style.display='none'">
-      <a href="participating_cities_durham.html" style="display: block; margin: 0.2rem 0; color: #264653;">Durham</a>
-      <a href="participating_cities_chicago.html" style="display: block; margin: 0.2rem 0; color: #264653;">Chicago</a>
-      <a href="participating_cities_seattle.html" style="display: block; margin: 0.2rem 0; color: #264653;">Seattle</a>
-      <a href="participating_cities_fort_collins.html" style="display: block; margin: 0.2rem 0; color: #264653;">Fort Collins</a>
-      <a href="participating_cities_denver.html" style="display: block; margin: 0.2rem 0; color: #264653;">Denver</a>
-      <a href="participating_cities_los_angeles.html" style="display: block; margin: 0.2rem 0; color: #264653;">Los Angeles</a>
-      <a href="participating_cities_campobasso.html" style="display: block; margin: 0.2rem 0; color: #264653;">Campobasso, Italy</a>
-
-
-
-
+  <nav aria-label="Primary navigation">
+    <a href="background.html">Background</a>
+    <a href="instructions.html" aria-current="page">Instructions</a>
+    <a href="questions.html">Questions</a>
+    <div class="dropdown">
+      <button class="dropdown-toggle" type="button" aria-expanded="false" aria-controls="city-menu">Participating Cities ▾</button>
+      <div class="dropdown-menu" id="city-menu">
+        <a href="participating_cities_durham.html">Durham</a>
+        <a href="participating_cities_seattle.html">Seattle</a>
+        <a href="participating_cities_fort_collins.html">Fort Collins</a>
+        <a href="participating_cities_denver.html">Denver</a>
+        <a href="participating_cities_los_angeles.html">Los Angeles</a>
+        <a href="participating_cities_campobasso.html">Campobasso, Italy</a>
+      </div>
     </div>
-  </div>
-  <script>
-    const dropdown = document.querySelector('nav div');
-    const trigger = dropdown.querySelector('a');
-    const menu = dropdown.querySelector('div');
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-    });
-  </script>
+  </nav>
 
-</nav>
+  <script src="site.js" defer></script>
 
   <section>
     <h2>Step-by-Step Instructions for Volunteers for the 2026 Field Season</h2>
+    <p><em>(The 2026 field season has ended. Information about a potential 2027 season will be posted here.)</em></p>
 
-<h3>1. Fill out the volunteer interest form for your city</h3>
-<ul>
-    <li> <a href="https://forms.gle/ZWSjskycsXJNBHUP9">Seattle interest form</a></li>
-    <li><a href="https://forms.gle/6GamQ1ZojvYfqnnt5">Denver interest form</a></li>
-    <li><a href="https://forms.gle/7GNMTkURP7SVJjfC6">Fort Collins interest form</a></li>
-    <li><a href="https://forms.gle/3jViYgmQe1zdCYLU8">Durham interest form</a></li>
-    <li><a href="https://forms.gle/ECyiDt9peC3dUydVA">Los Angeles interest form</a></li>
-    <li>Chicago interest form (coming soon)</li>
-    <li>Campobasso interest form (coming soon)</li>
-    <li>Other cities (coming soon)</li>
-  <li>Based on your response to that form, we'll work with you to find a sampling location for you to "adopt" that is convenient for you (e.g. near your home or work).</li>
-</ul>
 
-<h3>2. Visit your site</h3>
+<h3>1. Visit your site</h3>
 <ul>
-  <li>Once you complete the interest form, we'll ask you to visit your site 4 times between May and June 2026.</li>
+  <li>After receiving an assigned site, visit it four times between May and June 2026.</li>
   <li>Make sure your site visit is within 3 hours of sunrise so you  catch the morning chorus, when most birds are particularly vocal.</li>
   <li>It's okay if you're not standing <i>exactly</i> on the marked point; try to be within about 50 yards of it.</li>
   <li>Your four site visits should be spread out across the months of May and June according to the calendar below. You can make each recording anytime within the recording week, but we prefer if recordings are made on the days marked with a star (Sunday or Monday).</li>
@@ -119,10 +54,10 @@
   </div>
 </div>
 
-  <h3>3. Make your recordings</h3>
+  <h3>2. Make your recordings</h3>
   <ul style="list-style: none; padding: 0;">
     <li>During each site visit, you'll record 3 minutes of audio on your phone using the free <b>Merlin Bird ID</b> app. You can download it from the Apple App Store 
-      <a href="https://itunes.apple.com/app/apple-store/id773457673?pt=401711&ct=marketingwebsite&mt=8">here</a> 
+      <a href="https://itunes.apple.com/app/apple-store/id773457673?pt=401711&amp;ct=marketingwebsite&amp;mt=8">here</a>
       or the Android Google Play store 
       <a href="http://bit.ly/MerlinBirdIDAndroid">here</a>. Using the app is super easy! Click through the images below to learn how to make a recording. We recommend that you try this out before going to make your first recording, in case you run into any issues.
     </li>
@@ -139,11 +74,11 @@
     </div>
   
     <div style="position: relative; margin-top: 1rem;">
-      <button onclick="prevImage()" 
+      <button onclick="prevImage()" aria-label="Show previous instruction image"
         style="position: absolute; left: 0; font-size: 2rem; background: none; border: none; cursor: pointer; color: #264653;">
         &#8592;
       </button>
-      <button onclick="nextImage()" 
+      <button onclick="nextImage()" aria-label="Show next instruction image"
         style="position: absolute; right: 0; font-size: 2rem; background: none; border: none; cursor: pointer; color: #264653;">
         &#8594;
       </button>
@@ -168,6 +103,7 @@
   
     function showImage(index) {
       document.getElementById("carousel-image").src = images[index].src;
+      document.getElementById("carousel-image").alt = images[index].caption;
       document.getElementById("carousel-caption").textContent = images[index].caption;
     }
   
@@ -184,7 +120,7 @@
   
 
 
-<h3>4. Note Conditions</h3>
+<h3>3. Note Conditions</h3>
 <ul>
   <li>After you email us your recording, we'll send a short followup email asking for a few additional details (your impression of the overall soundscape, the weather, etc.). Be sure to respond to this email promptly!</li>
 </ul>
